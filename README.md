@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+    # 🏡 Costa Rica House Site
 
-## Getting Started
+A beautifully minimal and emotionally warm site to showcase a house for sale — inspired by nature, peace, and the lush forest aesthetic of Costa Rica. Built with Next.js, Tailwind CSS v4, and a design system powered by CSS variables.
 
-First, run the development server:
+---
+
+## ✨ Tech Stack
+
+- [Next.js 14](https://nextjs.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- TypeScript
+- PostCSS (ESM config)
+- Google Fonts (Lora, Marcellus, Manrope)
+- Docker + Docker Compose
+
+---
+
+## ⚙️ Running Locally with Docker
+
+> No need to install Node or npm on your host — everything runs inside a container.
+
+### 1. Start the dev server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker compose up --build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Dev commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Use the helper script to run commands inside the container:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+./dev.sh npm run format      # Run Prettier
+./dev.sh npm install         # Install deps
+```
 
-## Learn More
+## 🧪 Tailwind Design System
 
-To learn more about Next.js, take a look at the following resources:
+This project uses Tailwind v4 with @theme to define design tokens in globals.css.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```css
+@theme {
+  --color-primary: #1e352f; /* Deep Jungle Green */
+  --color-surface: #3f5d47; /* Forest Moss */
+  --color-accent: #6e8b55; /* Palm Leaf */
+  --color-background: #f2f1eb; /* Cloud Cream */
+  --color-wood: #a47c48; /* Warm Wood */
+  --color-highlight: #d94d3a; /* Guava Red */
+}
+```
 
-## Deploy on Vercel
+Usage in components:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```tsx
+<div className="bg-background text-primary">Welcome to your forest retreat 🌿</div>
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧑‍🎨 Fonts
+
+Loaded from Google Fonts in `layout.tsx`:
+
+`Lora` – body text (warm serif)
+
+`Marcellus` – headlines (elegant serif)
+
+`Manrope` – modern UI fallback (clean sans)

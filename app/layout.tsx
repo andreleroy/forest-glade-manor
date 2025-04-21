@@ -20,9 +20,7 @@ export default function RootLayout({
         />
         <title>My Costa Rica Home</title>
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }

@@ -1,19 +1,19 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Design tokens via @theme */
 @theme {
   /* 🌿 Typography */
-  --font-sans: "Manrope", system-ui, sans-serif;
-  --font-serif: "Marcellus", serif;
-  --font-body: "Lora", Georgia, serif;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-serif: 'Marcellus', serif;
+  --font-body: 'Lora', Georgia, serif;
 
   /* 🍃 Colors */
-  --color-primary: #1E352F;       /* Deep Jungle Green */
-  --color-surface: #3F5D47;       /* Forest Moss */
-  --color-accent: #6E8B55;        /* Palm Leaf */
-  --color-background: #F2F1EB;    /* Cloud Cream */
-  --color-wood: #A47C48;          /* Warm Wood */
-  --color-highlight: #D94D3A;     /* Guava Red */
+  --color-primary: #1e352f; /* Deep Jungle Green */
+  --color-surface: #3f5d47; /* Forest Moss */
+  --color-accent: #6e8b55; /* Palm Leaf */
+  --color-background: #f2f1eb; /* Cloud Cream */
+  --color-wood: #a47c48; /* Warm Wood */
+  --color-highlight: #d94d3a; /* Guava Red */
 }
 
 body {
