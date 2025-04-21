@@ -1,4 +1,4 @@
-    # 🏡 Costa Rica House Site
+## 🏡 Forest Glade Manor House Site
 
 A beautifully minimal and emotionally warm site to showcase a house for sale — inspired by nature, peace, and the lush forest aesthetic of Costa Rica. Built with Next.js, Tailwind CSS v4, and a design system powered by CSS variables.
 
